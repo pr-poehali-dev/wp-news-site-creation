@@ -36,7 +36,7 @@ export const ARTICLES: Article[] = [
   { id: 8, slug: 'muzei-otkryvayut-zapasniki', title: 'Музеи открывают свои запасники', excerpt: 'Тысячи работ впервые становятся доступны — репортаж из хранилищ.', category: 'Культура', tags: ['репортаж', 'история'], date: '11 июня 2026', readMin: 4, author: 'Мария Тон', image: '', body: LOREM },
 ];
 
-export const SITE_NAME = 'Прессак40.ру';
+export const SITE_NAME = 'Пресса40.ру';
 export const SITE_TAGLINE = 'независимое издание';
 
 export const NAV = ['Главная', 'Новости', 'Архив', 'Категории', 'О сайте', 'Контакты'];
