@@ -15,7 +15,7 @@ export interface Article {
 export const HERO_IMAGE =
   'https://cdn.poehali.dev/projects/c9190c0b-89c7-4186-a95c-d2ead77fea4b/files/a6b880b8-8850-406f-85dc-cb5d6724aaba.jpg';
 
-export const CATEGORIES = ['Политика', 'Экономика', 'Технологии', 'Культура', 'Наука', 'Город'];
+export const CATEGORIES = ['Политика', 'Экономика', 'Технологии', 'Культура', 'Наука', 'Город', 'Федеральные новости'];
 
 export const ALL_TAGS = ['аналитика', 'интервью', 'репортаж', 'мнение', 'данные', 'история', 'тренды', 'хроника'];
 
