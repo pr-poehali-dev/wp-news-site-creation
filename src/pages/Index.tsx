@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
-import { ARTICLES, CATEGORIES, ALL_TAGS, NAV, HERO_IMAGE, SITE_NAME, SITE_TAGLINE } from '@/data/articles';
+import { ARTICLES, CATEGORIES, ALL_TAGS, NAV, SITE_NAME, SITE_TAGLINE } from '@/data/articles';
 
 export default function Index() {
   const [activeNav, setActiveNav] = useState('Главная');
