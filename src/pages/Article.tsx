@@ -7,6 +7,7 @@ export default function Article() {
   const { slug } = useParams<{ slug: string }>();
   const article = getArticleBySlug(slug || '');
   const [customImage, setCustomImage] = useState<string | null>(null);
+  const [photoAuthor, setPhotoAuthor] = useState('');
 
   if (!article) {
     return (
@@ -76,14 +77,25 @@ export default function Article() {
         {/* Cover photo with upload */}
         <div className="mb-12">
           {image ? (
-            <div className="relative group overflow-hidden rounded-sm">
-              <img src={image} alt={article.title} className="w-full max-h-[480px] object-cover" />
-              <label className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/40 transition-colors flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100">
-                <span className="flex items-center gap-2 text-background bg-foreground/70 px-4 py-2 rounded-sm text-sm">
-                  <Icon name="ImagePlus" size={16} /> Заменить фото
-                </span>
-                <input type="file" accept="image/*" className="hidden" onChange={handleUpload} />
-              </label>
+            <div>
+              <div className="relative group overflow-hidden rounded-sm">
+                <img src={image} alt={article.title} className="w-full max-h-[480px] object-cover" />
+                <label className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/40 transition-colors flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100">
+                  <span className="flex items-center gap-2 text-background bg-foreground/70 px-4 py-2 rounded-sm text-sm">
+                    <Icon name="ImagePlus" size={16} /> Заменить фото
+                  </span>
+                  <input type="file" accept="image/*" className="hidden" onChange={handleUpload} />
+                </label>
+              </div>
+              <div className="flex items-center gap-2 mt-2">
+                <Icon name="Camera" size={13} className="text-muted-foreground shrink-0" />
+                <input
+                  value={photoAuthor}
+                  onChange={(e) => setPhotoAuthor(e.target.value)}
+                  placeholder="Автор фото"
+                  className="text-xs text-muted-foreground bg-transparent border-none outline-none placeholder:text-muted-foreground/50 w-full italic"
+                />
+              </div>
             </div>
           ) : (
             <label className="flex flex-col items-center justify-center gap-3 border-2 border-dashed border-border rounded-sm py-20 cursor-pointer hover:border-primary hover:bg-secondary/30 transition-colors">
