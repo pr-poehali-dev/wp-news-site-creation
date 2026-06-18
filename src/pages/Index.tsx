@@ -76,7 +76,7 @@ export default function Index() {
       <div className="border-b border-border bg-secondary/40">
         <div className="container max-w-6xl flex items-center justify-between py-2 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
           <span>Четверг, 18 июня 2026</span>
-          <span className="hidden sm:inline">Независимое издание о людях и идеях</span>
+          <span className="hidden sm:inline">Сетевое издание</span>
         </div>
       </div>
 
@@ -287,7 +287,7 @@ export default function Index() {
           <div className="md:col-span-2">
             <span className="font-serif text-2xl font-bold">{SITE_NAME}</span>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Независимое издание о людях и идеях. © 2026. Все материалы вымышлены.
+              Сетевое издание. © 2026. Все материалы вымышлены.
             </p>
           </div>
           <div>

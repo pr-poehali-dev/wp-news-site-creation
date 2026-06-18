@@ -37,7 +37,7 @@ export const ARTICLES: Article[] = [
 ];
 
 export const SITE_NAME = 'Пресса40.ру';
-export const SITE_TAGLINE = 'независимое издание';
+export const SITE_TAGLINE = 'сетевое издание';
 
 export const NAV = ['Главная', 'Новости', 'Архив', 'Категории', 'О сайте', 'Контакты'];
 
