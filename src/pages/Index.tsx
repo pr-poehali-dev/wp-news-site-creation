@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
-import { ARTICLES, CATEGORIES, ALL_TAGS, NAV, HERO_IMAGE } from '@/data/articles';
+import { ARTICLES, CATEGORIES, ALL_TAGS, NAV, HERO_IMAGE, SITE_NAME, SITE_TAGLINE } from '@/data/articles';
 
 export default function Index() {
   const [activeNav, setActiveNav] = useState('Главная');
@@ -44,9 +44,9 @@ export default function Index() {
       <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="container max-w-6xl flex items-center justify-between h-16">
           <div className="flex items-baseline gap-2">
-            <span className="font-serif text-3xl font-bold tracking-tight">Глагол</span>
+            <span className="font-serif text-3xl font-bold tracking-tight">{SITE_NAME}</span>
             <span className="hidden sm:inline text-[11px] uppercase tracking-[0.25em] text-muted-foreground pb-1">
-              ежедневник
+              {SITE_TAGLINE}
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-7">
@@ -285,7 +285,7 @@ export default function Index() {
       <footer className="border-t border-border mt-16">
         <div className="container max-w-6xl py-12 grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <span className="font-serif text-2xl font-bold">Глагол</span>
+            <span className="font-serif text-2xl font-bold">{SITE_NAME}</span>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs leading-relaxed">
               Независимое издание о людях и идеях. © 2026. Все материалы вымышлены.
             </p>

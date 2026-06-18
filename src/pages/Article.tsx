@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
-import { getArticleBySlug, ARTICLES } from '@/data/articles';
+import { getArticleBySlug, ARTICLES, SITE_NAME, SITE_TAGLINE } from '@/data/articles';
 
 export default function Article() {
   const { slug } = useParams<{ slug: string }>();
@@ -37,9 +37,9 @@ export default function Article() {
       <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="container max-w-6xl flex items-center justify-between h-16">
           <Link to="/" className="flex items-baseline gap-2">
-            <span className="font-serif text-3xl font-bold tracking-tight">Глагол</span>
+            <span className="font-serif text-3xl font-bold tracking-tight">{SITE_NAME}</span>
             <span className="hidden sm:inline text-[11px] uppercase tracking-[0.25em] text-muted-foreground pb-1">
-              ежедневник
+              {SITE_TAGLINE}
             </span>
           </Link>
           <Link to="/" className="flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors">
